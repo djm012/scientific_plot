@@ -1,0 +1,18 @@
+* text=auto
+*.svg -text
+*.png binary
+*.pdf binary
+*.json text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.cmd text eol=crlf
+*.webp binary
+*.jpg binary
+*.tsv text eol=lf
+*.csv text eol=lf
+dist/data.json -diff linguist-generated
+dist/sources.csv -diff linguist-generated

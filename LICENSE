@@ -1,0 +1,36 @@
+MIT License
+
+Copyright (c) 2026 Research Figure Library contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Scope: This license applies to the web application (dist/index.html, dist/app.js,
+dist/style.css, dist/favicon.svg), the build and maintenance code in pipeline/ and
+scripts/, and the curated metadata written by this project (Chinese names, categories,
+descriptions and the term list in pipeline/icons/zh_terms.tsv).
+
+The original figure elements in dist/assets/elements/ and the computer-vision
+elements in dist/assets/vision/ (made from CC0 or public-domain photos) are
+additionally dedicated to the public domain under CC0 1.0
+(https://creativecommons.org/publicdomain/zero/1.0/).
+
+Third-party icons in dist/assets/icons/ and the collected figure elements in
+dist/assets/collected/ keep their own open-source licenses (MIT or CC0 1.0), and the paper figures in dist/assets/papers/ remain the property of
+their authors or publishers. None of them is licensed under the MIT License above. See
+THIRD_PARTY_NOTICES.md and dist/sources.csv for every item's source and license.

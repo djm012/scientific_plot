@@ -1,0 +1,22 @@
+# Unpublished Sites configuration.
+/.openai/
+
+# Archives, caches, environments, and installed dependencies.
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.log
+
+# Local download and render caches for the asset pipeline.
+/.cache/
+# Intermediate manifests; rebuilt by pipeline/papers/catalog.py and pipeline/icons/build.py.
+/pipeline/manifests/

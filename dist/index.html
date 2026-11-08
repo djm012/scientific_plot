@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="研图 Figure Atlas：模型结构图的现成零件——特征图、张量、注意力，编码器、U-Net、Transformer 等网络模块，分割、检测、三维视觉与医学影像示意，以及服务器、机器人、雪花等点缀；另附论文原图与开源科研图标。">
+  <title>研图 · 论文图元素材库</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="研图 Figure Atlas">
+  <meta property="og:title" content="研图 · 论文图元素材库">
+  <meta property="og:description" content="特征图、网络模块，分割、检测、三维视觉与医学影像示意，以及服务器、机器人、雪花等点缀，拿来就能放进模型图；另附 289 张论文原图与 2.8 万个科研图标。">
+  <meta property="og:image" content="https://runtimewarning.github.io/research-figure-library/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">跳到素材列表</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="./" aria-label="研图首页">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="brandGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4263eb"/><stop offset="1" stop-color="#7048e8"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#brandGradient)"/><path d="M11 18 20 12v34l-9 6z" fill="#fff" fill-opacity=".4"/><path d="M23 21.5 31 16.5v26l-8 5z" fill="#fff" fill-opacity=".7"/><path d="M34 25 41 21v18l-7 4z" fill="#fff"/><circle cx="49.5" cy="32" r="4.2" fill="#63e6be"/></svg>
+        <span class="brand-text"><strong>研图</strong><small>Figure Atlas</small></span>
+      </a>
+      <nav class="topnav" aria-label="主要分区">
+        <button type="button" data-tab-link="atomic">图元</button>
+        <button type="button" data-tab-link="paper">论文原图</button>
+        <button type="button" data-tab-link="icon">图标</button>
+      </nav>
+      <div class="topbar-actions">
+        <button class="pill-button" id="openFavorites" type="button"><span data-icon="bookmark"></span><span>收藏</span><b id="favoriteCount">0</b></button>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="切换深浅色"><span data-icon="contrast"></span></button>
+        <a class="icon-button" href="https://github.com/RuntimeWarning/research-figure-library" target="_blank" rel="noopener noreferrer" aria-label="GitHub 仓库"><span data-icon="github"></span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">原创图元 · 视觉图元 · 3D 物件 · 论文原图</p>
+        <h1 id="heroTitle">模型结构图的<span>现成零件</span></h1>
+        <p class="hero-lead"><b data-count="atomic">—</b> 个图元：特征图、张量和注意力，编码器、U-Net、Transformer 等网络模块，分割、检测、三维视觉与医学影像，以及服务器、机器人、雪花这类点缀。原创图元是可编辑的 SVG，改色、调尺寸都方便；另附论文原图与开源科研图标。</p>
+        <form class="search" role="search" id="searchForm">
+          <span data-icon="search" aria-hidden="true"></span>
+          <label class="sr-only" for="searchInput">搜索素材</label>
+          <input id="searchInput" type="search" autocomplete="off" spellcheck="false" placeholder="搜索图元，如 特征图、数据库、机器人、卫星、对勾、雪花">
+          <button class="search-clear" id="clearSearch" type="button" aria-label="清空搜索" hidden><span data-icon="close"></span></button>
+          <kbd aria-hidden="true">/</kbd>
+        </form>
+        <div class="quick" aria-label="常用搜索">
+          <button type="button" data-query="特征图">特征图</button>
+          <button type="button" data-query="分割">分割</button>
+          <button type="button" data-query="注意力">注意力</button>
+          <button type="button" data-query="服务器">服务器</button>
+          <button type="button" data-query="编码器">编码器</button>
+          <button type="button" data-query="机器人">机器人</button>
+          <button type="button" data-query="相机">相机视锥</button>
+          <button type="button" data-query="雪花">雪花 / 冻结</button>
+        </div>
+      </div>
+      <div class="hero-art" id="heroArt" aria-label="图元示例"></div>
+    </section>
+
+    <section class="stats" aria-label="素材规模">
+      <button type="button" class="stat lead" data-tab-link="atomic"><b data-count="atomic">—</b><span>图元</span></button>
+      <button type="button" class="stat" data-tab-link="paper"><b data-count="papers">—</b><span>论文原图</span></button>
+      <button type="button" class="stat" data-tab-link="icon"><b data-count="icons">—</b><span>科研图标</span></button>
+    </section>
+
+    <div class="tabs" role="tablist" id="tabs" aria-label="素材集合">
+      <button type="button" role="tab" data-tab="atomic">图元 <span>—</span></button>
+      <button type="button" role="tab" data-tab="paper">论文原图 <span>—</span></button>
+      <button type="button" role="tab" data-tab="icon">图标 <span>—</span></button>
+      <button type="button" role="tab" data-tab="all">全部 <span>—</span></button>
+      <button type="button" role="tab" data-tab="favorites"><span data-icon="bookmark"></span> 收藏 <span>0</span></button>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar" aria-label="筛选">
+        <div class="sidebar-head">
+          <h2>筛选</h2>
+          <button class="link-button" id="resetFilters" type="button">全部重置</button>
+          <button class="icon-button sidebar-close" id="closeSidebar" type="button" aria-label="关闭筛选"><span data-icon="close"></span></button>
+        </div>
+        <section class="filter-block">
+          <h3>分类</h3>
+          <div class="facet" id="categoryFacet"></div>
+        </section>
+        <section class="filter-block" id="packBlock">
+          <h3>图标集</h3>
+          <div class="facet" id="packFacet"></div>
+        </section>
+        <section class="filter-block" id="optionBlock">
+          <h3>选项</h3>
+          <label class="check" data-scope="paper"><input type="checkbox" id="onlyArch"> <span>只看完整架构图</span></label>
+          <label class="check" data-scope="paper"><input type="checkbox" id="onlyVector"> <span>附矢量 SVG / PDF</span></label>
+          <label class="check" data-scope="icon"><input type="checkbox" id="onlyMono"> <span>只看可改色图标</span></label>
+          <label class="check" data-scope="icon"><input type="checkbox" id="onlyFeatured"> <span>只看科研常用</span></label>
+        </section>
+      </aside>
+
+      <section class="results" id="results" aria-labelledby="resultsTitle" tabindex="-1">
+        <div class="toolbar">
+          <div class="toolbar-title">
+            <h2 id="resultsTitle">全部</h2>
+            <p id="resultsSummary" role="status" aria-live="polite">正在载入素材…</p>
+          </div>
+          <div class="toolbar-controls">
+            <button class="pill-button filters-toggle" id="openSidebar" type="button"><span data-icon="sliders"></span><span>筛选</span></button>
+            <label class="color-chip" id="gridColor" title="可改色图标的颜色">
+              <span class="sr-only">图标颜色</span>
+              <input type="color" id="iconColor" value="#1f2937">
+              <span class="color-dot" aria-hidden="true"></span><span class="color-label">图标颜色</span>
+            </label>
+            <label class="sr-only" for="sortSelect">排序</label>
+            <select id="sortSelect">
+              <option value="relevance">推荐排序</option>
+              <option value="year-desc">年份：新→旧</option>
+              <option value="year-asc">年份：旧→新</option>
+              <option value="name">名称</option>
+            </select>
+          </div>
+        </div>
+        <div class="active-filters" id="activeFilters" hidden></div>
+        <div class="grid" id="grid" aria-busy="true"></div>
+        <div class="empty" id="emptyState" hidden>
+          <span data-icon="search"></span>
+          <h3>没有找到匹配的素材</h3>
+          <p>换个关键词，或清除部分筛选条件。中英文名称、模型名、作者与标签都可以搜索。</p>
+          <div class="empty-jump" id="emptyJump"></div>
+          <button class="primary-button" id="emptyReset" type="button">清除筛选</button>
+        </div>
+        <div class="error" id="loadError" hidden>
+          <h3>素材索引没有加载成功</h3>
+          <p id="loadErrorMessage">请检查网络后重试。</p>
+          <button class="primary-button" id="retryLoad" type="button">重新加载</button>
+        </div>
+        <div class="more" id="moreBar" hidden>
+          <button class="ghost-button" id="loadMore" type="button">加载更多</button>
+          <span id="moreHint"></span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>研图 Figure Atlas</strong>
+        <p>论文配图图元库：模型结构图里的模块、细节与点缀，另附论文原图与开源科研图标。</p>
+      </div>
+      <div class="footer-links">
+        <a href="sources.csv" download>完整来源清单 CSV</a>
+        <a href="https://github.com/RuntimeWarning/research-figure-library" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="detailTitle" hidden>
+    <div class="drawer-head">
+      <span class="drawer-crumb" id="detailCrumb"></span>
+      <div class="drawer-nav">
+        <button class="icon-button" id="prevItem" type="button" aria-label="上一个"><span data-icon="left"></span></button>
+        <button class="icon-button" id="nextItem" type="button" aria-label="下一个"><span data-icon="right"></span></button>
+        <button class="icon-button" id="closeDrawer" type="button" aria-label="关闭详情"><span data-icon="close"></span></button>
+      </div>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <div class="stage" id="stage" data-bg="light">
+        <img id="detailImage" alt="">
+        <div class="stage-tools">
+          <div class="segmented" role="group" aria-label="预览背景">
+            <button type="button" data-bg="light" aria-pressed="true">浅色</button>
+            <button type="button" data-bg="checker" aria-pressed="false">透明</button>
+            <button type="button" data-bg="dark" aria-pressed="false">深色</button>
+          </div>
+          <span id="detailSize"></span>
+          <a class="stage-open" id="openOriginal" target="_blank" rel="noopener">查看原尺寸 <span data-icon="external"></span></a>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="badges" id="detailBadges"></div>
+        <h2 id="detailTitle"></h2>
+        <p class="detail-en" id="detailEnglish"></p>
+        <p class="detail-desc" id="detailDescription"></p>
+        <div class="recolor" id="recolor" hidden>
+          <label for="detailColor">颜色</label>
+          <input type="color" id="detailColor" value="#1f2937">
+          <div class="swatches" id="swatches"></div>
+        </div>
+        <div class="actions" id="detailActions"></div>
+        <div class="png-size" id="pngSize" hidden>
+          <span>PNG 尺寸</span>
+          <div class="segmented" role="group" aria-label="PNG 尺寸">
+            <button type="button" data-size="256" aria-pressed="false">256</button>
+            <button type="button" data-size="512" aria-pressed="true">512</button>
+            <button type="button" data-size="1024" aria-pressed="false">1024</button>
+            <button type="button" data-size="2048" aria-pressed="false">2048</button>
+          </div>
+        </div>
+        <figure class="caption" id="detailCaption" hidden>
+          <figcaption>原文图注</figcaption>
+          <blockquote id="captionText"></blockquote>
+        </figure>
+        <section class="source-card" id="sourceCard" hidden>
+          <h3>来源</h3>
+          <p class="source-title" id="sourceTitle"></p>
+          <p class="source-meta" id="sourceMeta"></p>
+          <div class="source-links" id="sourceLinks"></div>
+          <div class="cite">
+            <button class="ghost-button small" id="copyBibtex" type="button"><span data-icon="copy"></span>复制 BibTeX</button>
+            <button class="ghost-button small" id="copyCitation" type="button"><span data-icon="copy"></span>复制引用</button>
+          </div>
+        </section>
+        <dl class="meta" id="detailMeta"></dl>
+        <div class="tags" id="detailTags"></div>
+      </div>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
