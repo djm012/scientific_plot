@@ -12,7 +12,7 @@
 
 另附 289 张按原样裁剪的经典论文原图和 28,102 个开源科研图标。
 
-[在线检索](https://runtimewarning.github.io/research-figure-library/) · [GitHub 仓库](https://github.com/RuntimeWarning/research-figure-library) · [完整来源清单](dist/sources.csv)
+[在线检索]((https://djm012.github.io/scientific_plot/)) · [GitHub 仓库]((https://github.com/djm012/scientific_plot)) · [完整来源清单](dist/sources.csv)
 
 ![研图首页](docs/screenshot-home.jpg)
 
