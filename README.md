@@ -129,8 +129,8 @@
 只需要 Python 3.9 或更新版本，不依赖第三方包。
 
 ```bash
-git clone https://github.com/RuntimeWarning/research-figure-library.git
-cd research-figure-library
+https://github.com/djm012/scientific_plot.git
+cd scientific_plot
 python scripts/serve.py
 ```
 
@@ -147,12 +147,12 @@ Windows 可直接双击根目录的 **`启动检索.cmd`**。浏览器打开 <ht
 
 ## 许可
 
-代码采用 [MIT](LICENSE)；原创图元与计算机视觉图元为 CC0。收集的物件和图标保留各自的开源许可（原文在 [`dist/licenses/`](dist/licenses/)，逐项来源见 `sources.csv`）。论文原图的权利归原作者或出版方，使用时请引用原论文；如需调整或移除某张图，请[提交 Issue](https://github.com/RuntimeWarning/research-figure-library/issues)。
+代码采用 [MIT](LICENSE)；原创图元与计算机视觉图元为 CC0。收集的物件和图标保留各自的开源许可（原文在 [`dist/licenses/`](dist/licenses/)，逐项来源见 `sources.csv`）。论文原图的权利归原作者或出版方，使用时请引用原论文；如需调整或移除某张图，请[提交 Issue](https://github.com/djm012/scientific_plot/issues/)。
 
 ## 项目结构
 
 ```text
-research-figure-library/
+scientific_plot/
 ├── dist/                         # 发布到 GitHub Pages 的静态站点
 │   ├── index.html · style.css · app.js · favicon.svg · og-image.jpg（分享卡片）
 │   ├── data.json                 # 页面索引：论文原图记录 + 图标表
