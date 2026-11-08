@@ -22,7 +22,7 @@ DIST = PROJECT / "dist"
 ASSETS = DIST / "assets"
 CACHE = PROJECT / ".cache"
 MANIFESTS = PROJECT / "pipeline" / "manifests"
-USER_AGENT = "research-figure-library/2.0 (+https://github.com/RuntimeWarning/research-figure-library)"
+USER_AGENT = "scientific_plot/2.0 (+https://github.com/djm012/scientific_plot)"
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
