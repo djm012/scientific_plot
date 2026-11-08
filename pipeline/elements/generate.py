@@ -913,7 +913,7 @@ def main():
                                                 f"可直接改色、增删格子或调整大小。")
     source = {"short": "研图原创", "title": "研图 Figure Atlas 原创图元", "authors": ["研图 Figure Atlas"],
               "venue": "CC0 1.0 · 可自由使用", "year": 2026, "arxiv": "",
-              "url": "https://github.com/RuntimeWarning/research-figure-library", "pdf": "",
+              "url": "https://github.com/djm012/scientific_plot/", "pdf": "",
               "license": "CC0-1.0", "license_name": "CC0 1.0（公共领域）",
               "license_url": "https://creativecommons.org/publicdomain/zero/1.0/", "original": True}
     write_json(MANIFESTS / "elements.json", {"categories": CATEGORIES, "sources": {"figure-atlas": source},
