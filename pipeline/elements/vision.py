@@ -2157,7 +2157,7 @@ def render(spec):
         "description": ("研图视觉图元：用 CC0 / 公有领域照片按常见视觉任务处理得到，处理结果同样以 CC0 发布。" if key else
                         "研图视觉图元：统一等轴测风格的三维视觉示意，SVG 可直接编辑，CC0 发布。" if isinstance(maker, tuple) else
                         "研图视觉图元：由脚本直接生成的示意图像，CC0 发布。"),
-        "upstream": upstream(key) if key else "https://github.com/RuntimeWarning/research-figure-library",
+        "upstream": upstream(key) if key else "https://github.com/djm012/scientific_plot/",
         "upstream_label": "原始照片" if key else "生成脚本",
         "credit": credit(key) if key else "Figure Atlas (CC0 1.0); attribution not required.",
         "page": "", "svg_kind": "" if "svg" not in files else ("mixed" if "<image" in svg else "vector"),
@@ -2188,7 +2188,7 @@ def main():
             path.unlink()
     source = {"short": "研图视觉", "title": "研图视觉图元（基于 CC0 / 公有领域照片与原创示意）", "authors": ["研图 Figure Atlas"],
               "venue": "CC0 1.0 · 可自由使用", "year": 2026, "arxiv": "",
-              "url": "https://github.com/RuntimeWarning/research-figure-library", "pdf": "",
+              "url": "https://github.com/djm012/scientific_plot/", "pdf": "",
               "license": "CC0-1.0", "license_name": "CC0 1.0（公共领域）",
               "license_url": "https://creativecommons.org/publicdomain/zero/1.0/", "license_file": "",
               "attribution": "Figure Atlas (CC0 1.0); attribution not required.",
